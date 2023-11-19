@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body> 
+    <header class="header" id="header"><a class="logo" href="/"><img src="./assets/img/logo.png" alt="swws"></a>
+      <div class="topbar" id="topbar">
+        <div class="topbar__icon" data-type="login">  <i class="fa fa-user"></i><span>login</span></div>
+        <div class="topbar__icon" data-type="register">  <i class="fa fa-user-plus"></i><span>register</span></div>
+        <div class="toggle-menu">
+          <div class="toggle-menu_icon" id="toggle-menu">
+            <div class="first-bar"></div>
+            <div class="second-bar"></div>
+            <div class="third-bar"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside class="aside" id="sidebar"> 
+      <nav class="main-nav" id="main-menu">
+        <ul class="main-menu" id="main-menu">
+          <li class="main-menu__item"> <a class="main-menu__link main-menu__link--active" href="/">home</a>
+          </li>
+          <li class="main-menu__item"> <a class="main-menu__link" href="/about.html">about</a>
+          </li>
+          <li class="main-menu__item"> <a class="main-menu__link" href="/contact.html">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main"> 
+      <h1 class="title">Home</h1>
+      <div class="galery" id="galery">
+        <div class="galery__item">   <img src="assets/img/panda.jpg" alt="imagen1"></div>
+        <div class="galery__item">   <img src="assets/img/logo.png" alt="imagen2"></div>
+        <div class="galery__item">   <img src="assets/img/reino-animal-.jpg" alt="imagen3"></div>
+        <div class="galery__item">   <img src="assets/img/logo.png" alt="imagen4"></div>
+        <div class="galery__item">   <img src="assets/img/panda.jpg" alt="imagen5"></div>
+        <div class="galery__item">   <img src="assets/img/logo.png" alt="imagen2"></div>
+        <div class="galery__item">   <img src="assets/img/reino-animal-.jpg" alt="imagen3"></div>
+        <div class="galery__item">   <img src="assets/img/logo.png" alt="imagen4"></div>
+        <div class="galery__item">   <img src="assets/img/panda.jpg" alt="imagen5"></div>
+      </div>
+    </main>
+    <div class="lightbox" id="login-modal">
+      <form class="form" id="login-form">
+        <div class="form__field">
+          <label class="form__label" for="login-email">Email</label>
+          <input class="form__input" type="email" name="email" id="login-email">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="login-password">Password</label>
+          <input class="form__input" type="password" name="password" id="login-password">
+        </div>
+        <div class="form__field">
+          <input class="form__submit" type="submit" value="Send">
+        </div>
+      </form>
+    </div>
+    <div class="lightbox" id="register-modal">
+      <form class="form" id="register-form">
+        <div class="form__field">
+          <label class="form__label" for="register-email">Email</label>
+          <input class="form__input" id="register-email" type="email" name="email">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="register-password">Password</label>
+          <input class="form__input" id="register-password" type="password" name="password">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="register-password-2">Repeat Password </label>
+          <input class="form__input" id="register-password-2" type="password" name="password-2">
+        </div>
+        <div class="form__field form__buttons">
+          <input class="button form__submit" type="submit" value="Send">
+        </div>
+      </form>
+    </div>
+    <script src="js/scripts-min.js"></script>
+  </body>
+</html>

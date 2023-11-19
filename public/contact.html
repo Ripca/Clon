@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body> 
+    <header class="header" id="header"><a class="logo" href="/"><img src="./assets/img/logo.png" alt="swws"></a>
+      <div class="topbar" id="topbar">
+        <div class="topbar__icon" data-type="login">  <i class="fa fa-user"></i><span>login</span></div>
+        <div class="topbar__icon" data-type="register">  <i class="fa fa-user-plus"></i><span>register</span></div>
+        <div class="toggle-menu">
+          <div class="toggle-menu_icon" id="toggle-menu">
+            <div class="first-bar"></div>
+            <div class="second-bar"></div>
+            <div class="third-bar"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside class="aside" id="sidebar"> 
+      <nav class="main-nav" id="main-menu">
+        <ul class="main-menu" id="main-menu">
+          <li class="main-menu__item"> <a class="main-menu__link" href="/">home</a>
+          </li>
+          <li class="main-menu__item"> <a class="main-menu__link" href="/about.html">about</a>
+          </li>
+          <li class="main-menu__item"> <a class="main-menu__link main-menu__link--active" href="/contact.html">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main"> 
+      <h1 class="title">Contact</h1>
+      <div class="contact">
+        <div class="contact__form"> 
+          <form class="form-contact">
+            <div class="form-contact__fields">
+              <input class="form-contact__input" type="text" name="name" placeholder="NAME">
+              <input class="form-contact__input" type="email" name="email" placeholder="EMAIL">
+              <input class="form-contact__input" type="text" name="subject" placeholder="Subject">
+            </div>
+            <div class="form-contact__field"> 
+              <textarea class="form-contact__textarea" name="message" placeholder="messssage"> </textarea>
+            </div>
+          </form>
+          <div class="form-contact__field"> 
+            <input class="form__submit" type="submit" value="Send">
+          </div>
+        </div>
+        <div class="contact__map"> 
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d61797.61767146299!2d-90.5351894!3d14.5218984!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sgt!4v1700071923707!5m2!1ses!2sgt" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a href="https://www.google.com/maps/place/Colonia+Prados+de+Villahermosa,+Cdad.+de+Guatemala/@14.5218984,-90.5351894,13z/data=!4m6!3m5!1s0x8589a6ee948f3aa1:0x47a6cad0af73fb0!8m2!3d14.5343033!4d-90.5482376!16s%2Fg%2F1tgqjrhp" target="_blank"> <img class="contact__img-map" src="assets/img/logo.png" alt="map"></a>
+        </div>
+        <div class="social">
+          <div class="social__icon"><i class="fab fa-twitter-square"></i><i class="fab fa-twitter-square"></i></div>
+          <div class="social__icon"><i class="fab fa-instagram"></i><i class="fab fa-instagram"></i></div>
+          <div class="social__icon"><i class="fab fa-youtube-square"></i><i class="fab fa-youtube-square"></i></div>
+          <div class="social__icon"><i class="fab fa-pinterest-square"></i><i class="fab fa-pinterest-square"></i></div>
+        </div>
+      </div>
+    </main>
+    <div class="lightbox" id="login-modal">
+      <form class="form" id="login-form">
+        <div class="form__field">
+          <label class="form__label" for="login-email">Email</label>
+          <input class="form__input" type="email" name="email" id="login-email">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="login-password">Password</label>
+          <input class="form__input" type="password" name="password" id="login-password">
+        </div>
+        <div class="form__field">
+          <input class="form__submit" type="submit" value="Send">
+        </div>
+      </form>
+    </div>
+    <div class="lightbox" id="register-modal">
+      <form class="form" id="register-form">
+        <div class="form__field">
+          <label class="form__label" for="register-email">Email</label>
+          <input class="form__input" id="register-email" type="email" name="email">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="register-password">Password</label>
+          <input class="form__input" id="register-password" type="password" name="password">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="register-password-2">Repeat Password </label>
+          <input class="form__input" id="register-password-2" type="password" name="password-2">
+        </div>
+        <div class="form__field form__buttons">
+          <input class="button form__submit" type="submit" value="Send">
+        </div>
+      </form>
+    </div>
+    <script src="js/scripts-min.js"></script>
+  </body>
+</html>

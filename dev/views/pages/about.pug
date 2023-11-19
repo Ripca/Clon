@@ -1,0 +1,20 @@
+extends ../templates/template
+block menu 
+   -pageActive='about'
+    include ../includes/main-menu
+block title 
+    h1.title About
+    .about  
+        .about__img.show 
+            img(src="assets/img/logo2.png", alt="about1")
+        .about__text.show
+            h2 Title 1
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, aut consequatur magnam consequuntur, voluptatibus natus, doloremque modi aliquam quia repudiandae aspernatur tempore nisi eaque ducimus fuga dignissimos ipsum incidunt mollitia.
+        .about__img 
+            img(src="assets/img/logo.png", alt="about2")
+        .about__text
+            h2 Title 2
+            p OTORORRLorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, aut consequatur magnam consequuntur, voluptatibus natus, doloremque modi.
+    .controls
+        i.fas.fa-chevron-circle-left#prev
+        i.fas.fa-chevron-circle-right#next

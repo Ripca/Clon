@@ -1,0 +1,93 @@
+.form{
+    background-color: $dark-color;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 360px;
+
+    &__field{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__label,
+    &__input{
+        width: 100%;
+        margin-bottom: 1rem;
+        background:none;
+        border: none;
+        outline: none;
+        color: $text-color;
+    }
+
+    &__input{
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $text-color;
+    }
+
+    &__submit{
+        // display: inline-block;
+        padding: .5rem 1rem;
+        color: $text-color;
+        background-color: $primary-color;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: transform .2s;
+        &:active{
+            transform: scale(.2);
+        }
+      
+    }
+
+}
+
+
+.form-contact{
+    display: grid;
+    gap: 30px;
+    width: 320px;
+    margin: 0 auto;
+    padding-top:2rem ;
+
+    @include laptop{
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 auto 2rem;
+        width: 50%;
+
+
+        &__fields{
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &__input,
+        &__textarea{
+            height: 50px;
+            background-color: $dark-color;
+            color: $text-color;
+            border: 1px solid;
+            outline: none;
+            padding-left: .5rem;
+        }
+
+        &__textarea{
+            resize: none;
+            width: 320px;
+            height: 150px;
+            padding: .5rem;
+
+        }
+
+
+    }
+}
+
+
+

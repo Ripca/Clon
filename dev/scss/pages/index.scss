@@ -1,0 +1,17 @@
+.galery{    
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(200px,1fr));
+        gap: 16px;
+        padding: 10px;
+        border-radius: 20px;
+        
+    &__items{
+        border-radius: 10px;
+        background-color: #fff;
+        height  : 200px;
+    }
+}
+
+    
