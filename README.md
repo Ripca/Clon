@@ -1,6 +1,6 @@
 # Prueba de página usando Sass, Gulp y dependencias a través de comandos npm
 
-Página de prueba para utilizar sass y pug junto con babel, cuenta con tres páginas, y se adapta a dispositivos móbiles.
+Página de prueba para utilizar sass y pug junto con babel y gulp, cuenta con tres páginas, y se adapta a dispositivos móbiles.
 
 **Tecnologías empleadas**:
  - Gulp
