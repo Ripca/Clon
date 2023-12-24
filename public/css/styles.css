@@ -3,7 +3,7 @@
 :root {
   --primary-color: #3f95ea;
   --secondary-color: #52d3aa;
-  --danger-color: #ff3c32;
+  --danger-color: #bd69b9;
   --cta-color: #fba905;
   --dark-color: #343434;
   --dark-color-2: #666;
@@ -323,11 +323,10 @@ template {
 }
 
 body {
-  background-color: lightblue;
-  color: #000;
+  color: var(--text-color);
   margin: 0;
   min-height: 100vh;
-  background-color: #999;
+  background-color: var(--dark-color);
   font-family: "Cabin";
 }
 @media screen and (min-width: 1024px) {
@@ -341,6 +340,7 @@ body {
 
 .header {
   padding: 1em 0;
+  height: 50px;
 }
 @media screen and (min-width: 1024px) {
   .header {
@@ -349,6 +349,7 @@ body {
     justify-content: space-between;
     grid-column: 1/-1;
     grid-row: 1/2;
+    width: 100vw;
   }
 }
 
@@ -368,11 +369,17 @@ body {
 @media screen and (min-width: 1024px) {
   .topbar {
     left: 100%;
-    width: 20vw;
+    width: 100vw;
     justify-content: space-around;
     transform: translateX(-100%);
     height: 50px;
     padding-left: 0;
+  }
+  .topbar__icon {
+    background-color: transparent;
+    padding: 10px 16px;
+    border: 4px solid var(--dark-color);
+    border-radius: 25px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -382,6 +389,7 @@ body {
 }
 
 .toggle-menu {
+  margin-right: 5px;
   width: 40px;
   height: 50px;
   padding: 4px;
@@ -403,7 +411,7 @@ body {
   position: absolute;
   width: 30px;
   height: 3px;
-  background-color: #333;
+  background-color: var(--dark-color);
   border-radius: 5px;
   transition: transform 0.3s;
 }
@@ -426,6 +434,7 @@ body {
 .show .first-bar {
   transform: rotate(-45deg);
   top: 1.5rem;
+  background-color: var(--dark-color);
 }
 
 .show .second-bar {
@@ -433,6 +442,7 @@ body {
 }
 
 .show .third-bar {
+  background-color: var(--dark-color);
   transform: rotate(45deg);
   top: 1.5rem;
 }
@@ -449,7 +459,7 @@ body {
   justify-content: center;
   position: fixed;
   z-index: 200;
-  top: 0.5rem;
+  top: 0.1rem;
   left: 0.2rem;
 }
 @media screen and (min-width: 1024px) {
@@ -462,10 +472,9 @@ body {
 }
 
 .aside {
-  background-color: #343434;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 120%;
   top: 50px;
   transform: translateY(-100%);
   transition: transform 0.3s;
@@ -480,14 +489,14 @@ body {
   }
 }
 .aside.show {
-  transform: translateY(0);
+  transform: translateY(-5%);
 }
 
 .main-nav {
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: #777;
+  background-color: var(--dark-color-2);
 }
 
 .main-menu {
@@ -501,7 +510,7 @@ body {
   font-size: 20px;
   text-transform: uppercase;
   line-height: 120px;
-  border-bottom: 2px solid var(--dark-color);
+  border-bottom: 3px solid var(--dark-color);
 }
 .main-menu__link {
   text-decoration: none;
@@ -645,7 +654,7 @@ body {
 }
 
 .social {
-  color: #fff;
+  color: var(--text-color);
   position: absolute;
   bottom: 1.5rem;
   display: flex;
@@ -683,17 +692,37 @@ body {
   }
 }
 
-.galery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-  padding: 10px;
-  border-radius: 20px;
+@media screen and (min-width: 361px) {
+  .galery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.galery__items {
+@media screen and (min-width: 1024px) {
+  .galery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 12px;
+    grid-auto-flow: dense;
+  }
+  .galery__item img {
+    width: 100%;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+  }
+  .galery__item:hover {
+    filter: opacity(0.7);
+    transform: scale(1.03);
+  }
+  .wide {
+    grid-column: span 2;
+  }
+}
+img {
   border-radius: 10px;
-  background-color: #fff;
-  height: 200px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -725,10 +754,6 @@ body {
   }
 }
 
-.show {
-  opacity: 1;
-}
-
 .controls {
   width: 25%;
   margin: 0 auto;
@@ -736,6 +761,10 @@ body {
   display: flex;
   justify-content: space-between;
   color: var(--text-color);
+}
+
+.show {
+  opacity: 1;
 }
 
 .contact {

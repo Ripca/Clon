@@ -1,19 +1,17 @@
-.logo{
+.logo {
     width: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
-position: fixed;
-z-index: 200;
-top: .5rem;
-left: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 200;
+    top: 0.1rem;
+    left: 0.2rem;
 
-@include laptop{
-    // position: absolute;
-    width: 5%;
-    top: 1rem;
-    left: 2.3%;
-    top: 1%;
-}
-
+    @include laptop {
+        width: 5%;
+        top: 1rem;
+        left: 2.3%;
+        top: 1%;
+    }
 }

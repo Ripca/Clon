@@ -1,4 +1,4 @@
-.lightbox{
+.lightbox {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,9 +10,9 @@
     justify-content: center;
     align-items: center;
     transform: scale(0);
-    transition: transform .4s;
+    transition: transform 0.4s;
 
-    &--show{
+    &--show {
         transform: scale(1);
     }
 }

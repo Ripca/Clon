@@ -1,35 +1,31 @@
-const prev=document.getElementById('prev');  //cambiar por comillas dobles
-const next=document.getElementById('next');
+//Obtengo los botones para luego agregarles la funcion de avanzar y retroceder las imagenes
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 
-const images=Array.from(document.querySelectorAll(".about__img"))
-const texts=Array.from(document.querySelectorAll(".about__text"))
+const images = Array.from(document.querySelectorAll(".about__img"));
+const texts = Array.from(document.querySelectorAll(".about__text"));
 
-let cont=0;
+let cont = 0;
 
-if (prev) {
-    prev.addEventListener("click", ()=>setClass(prev))
-}
+prev && prev.addEventListener("click", () => setClass("prev"));
+next && next.addEventListener("click", () => setClass("next"));
 
-if (next) {
-    next.addEventListener("click", ()=>setClass(next))
-}
+const setClass = (direction) => {
+    images.map((image) => image.classList.remove("show"));
+    texts.map((text) => text.classList.remove("show"));
 
-const setClass =(direction)=>{
-    images.map(image=>image.classList.remove('show'))
-    texts.map(text=>text.classList.remove('show'))
+    setCont(direction);
 
-    setCont(direction)
+    images[cont].classList.add("show");
+    texts[cont].classList.add("show");
+};
 
-    images[cont].classList.add('show')
-    texts[cont].classList.add('show')
-}
-
-const setCont=(direction)=>{
-    if (direction=='next') {
-        if (cont==images.length-1) cont=0       
-        else cont++       
-    }else {
-        if (cont==0) cont=images.length-1       
-        else cont--        
+const setCont = (direction) => {
+    if (direction == "prev") {
+        if (cont == 0) cont = images.length - 1;
+        else cont--;
+    } else {
+        if (cont == images.length - 1) cont = 0;
+        else cont++;
     }
-}
+};

@@ -1,18 +1,11 @@
-.main{
+.main {
     padding: 0.5rem 1rem;
-    
-    @include laptop{
+
+    @include laptop {
         grid-column: 2/-1;
         grid-row: 2/-1;
         background-color: $dark-color;
         height: 100%;
         padding: 0 2rem;
-
-        
-
-
     }
 }
-
-
-
