@@ -4,6 +4,9 @@ Página de prueba para utilizar sass y sus estructura de bloques, pug para las p
 
 **Tecnologías empleadas**:
 
+-   Html
+-   Css
+-   JavaScript
 -   Gulp
 -   Sass
 -   Babel
