@@ -14,6 +14,6 @@ Página de prueba para utilizar sass y sus estructura de bloques, pug para las p
 
 ## Preview
 
--   https://github.com/Ripca/clon/blob/main/public/assets/img/Home.PNG
--   https://github.com/Ripca/clon/blob/main/public/assets/img/About.PNG
--   https://github.com/Ripca/clon/blob/main/public/assets/img/Contact.PNG
+![](https://github.com/Ripca/clon/blob/main/public/assets/img/Home.PNG)
+![](https://github.com/Ripca/clon/blob/main/public/assets/img/About.PNG)
+![](https://github.com/Ripca/clon/blob/main/public/assets/img/Contact.PNG)
